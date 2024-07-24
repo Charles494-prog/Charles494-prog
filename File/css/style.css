@@ -1,0 +1,240 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../resources/background imageee.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.centered-div {
+    width: 1000px;
+    height: 500px;
+    padding: 20px;
+    background-color: rgb(212, 212, 212);
+    text-align: center;
+    border-radius: 1% 5% 5% 1%;
+    box-shadow: 0 0 10px rgba(3, 3, 3, 0.1);
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.img-wrapper {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    width: 120px;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.left-div {
+    flex: 1;
+    padding: 5px;
+    background-color: rgba(242, 242, 242, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.right-div {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid #2b2b2b76;
+}
+
+.warning {
+    margin: 10px 0;
+    color: rgb(31, 31, 31);
+    font-size: 12px;
+}
+
+.intro {
+    color: rgb(58, 58, 58);
+    font-size: 65px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+}
+
+.subt {
+    color: rgb(31, 31, 31);
+    font-size: 25px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.subt2 {
+    color: rgb(31, 31, 31);
+    font-size: 20px;
+}
+
+.name, .pass {
+    margin-top: 5px;
+    color: rgba(0, 0, 0, .87);
+    border-bottom-color: rgba(114, 29, 106, 0.42);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    padding: 14px 16px;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 7px;
+    background: rgb(245, 245, 245);
+    margin-bottom: 16px;
+}
+
+.name:hover, .pass:hover,
+.name:focus, .pass:focus {
+    border-bottom-color: rgba(0, 0, 0, .87);
+    background: #ececec;
+}
+
+.login {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #5ec983;
+    height: 48px;
+}
+
+.login:hover {
+    transform: scale(1.04);
+    background-color: #1c4d2d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7edff;
+}
+
+button {
+    margin: 50px;
+    background: #333;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    width: 120px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#toastBox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.toast {
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.toast i {
+    margin: 0 20px;
+    font-size: 35px;
+    color: green;
+}
+
+.toast.error i {
+    color: rgb(176, 66, 66);
+}
+
+.toast.Invalid i {
+    color: orange;
+}
+
+.toast::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: green;
+    animation: anim 5s linear forwards;
+}
+
+@keyframes anim {
+    100% {
+        width: 0;
+    }
+}
+
+.toast.error::after {
+    background: rgb(176, 66, 66);
+}
+
+.toast.Invalid::after {
+    background: orange;
+}
